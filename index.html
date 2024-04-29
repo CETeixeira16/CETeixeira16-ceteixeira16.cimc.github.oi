@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uma calculadora de IMC">
+    <meta name="keywords" content="Calculadora, IMC, Índice de Massa Corpórea, peso ideal, altura, peso,">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="./src/css/estilo.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,250;0,400;0,500;0,700;0,900;1,100;1,250;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+            <div class="logo">
+                <img src="./src/img/a-github.png" width="100px" alt="">
+            </div>
+
+            <div class="menu">
+                <a href="https://darkcet.blogspot.com/" target="_blank">HOME</a>
+                <a href="https://www.facebook.com/cometageek" target="_blank">Facebook</a>
+                <a href="https://www.olx.com.br/perfil/c-eduardo-st-a78932ab" target="_blank">Bazar</a>
+            </div>
+    </nav>
+
+    <header class="header">
+        <div class="headline">            
+            <h1 style="font-size: 40px;">Cálculo IMC</h1>
+            <h2 style="font-size: 22px;">IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</h2>
+            <h3 style="font-size: 15px;">O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.
+                Quer descobrir seu IMC? Insira seu peso e sua altura nos campos ao lado.</h3>
+        </div>
+        <div class="arcalc">
+            <div class="calc">
+                <h1 style="font-size:22px; color: white;">Calculadora IMC</h1>
+                Peso <br>
+                <input id="peso" type="number" placeholder="Digite o seu Peso." step="0.01" /><br><br>
+
+                Altura <br>
+                <input id="altura" type="number" placeholder="Digite a sua Altura." step="0.01"/><br><br>
+
+                <button onclick="calcularIMC()"> Calcular IMC</button>
+                <p></p>
+
+                <script>
+                    function calcularIMC() {
+                    const peso = parseFloat(document.getElementById("peso").value);
+                    const altura = parseFloat(document.getElementById("altura").value);
+
+                    const imc = (peso / (altura * altura)).toFixed(1);
+
+                    document.querySelector("p").innerHTML = imc + ' ' + classificacao(imc);
+                    }
+
+                    function classificacao(imc) {
+                    if(imc < 18.5)
+                    return 'Magresa';
+
+                    if(imc >= 18.5 && imc < 24.9)
+                    return 'Peso Normal';
+
+                    if(imc >= 25 && imc < 29.9)
+                    return 'Sobrepeso I';
+
+                    if(imc >= 30 && imc < 39.9)
+                    return 'Obesidade II';
+
+                    if(imc >= 40)
+                    return 'Obesidade Grave III';
+                    }
+
+                </script>
+            </div>
+        </div>
+    </header>
+
+    <Section>
+
+        <h2 class="bb">Bazar do Blog</h2>
+        <div class="dbb">
+        <marquee direction="left" scrollamount="4" width="90%" height="250" behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()">
+      
+            <!--Imagem do Jogo 1-->
+            <a href="https://ba.olx.com.br/grande-salvador/games/jogos-de-video-game/super-mario-strikers-wii-1296429926?" target="_blank"><img src="https://img.olx.com.br/images/66/669409751018574.webp" height="250" title="Super Mario Strikers WII" alt="Imagem da capa de Super Mario Strikers WII anunciado na OLX" /></a>
+            <!--Imagem do Jogo 2-->
+            <a href="https://ba.olx.com.br/grande-salvador/games/jogos-de-video-game/super-smash-bros-brawl-wi-1296426709?" target="_blank"><img src="https://img.olx.com.br/images/90/900465396768451.webp" height="250" title="Super Smash Bros. Brawl WII" alt="Imagem da capa de Super Smash Bros. Brawl WII anunciado na OLX" /></a>
+            <!--Imagem do Jogo 3-->
+            <a href="https://ba.olx.com.br/grande-salvador/games/jogos-de-video-game/mario-kart-wii-1296425041?" target="_blank"><img src="https://img.olx.com.br/images/58/585406757428460.webp" height="250" title="Mario Kart Wii" alt="Imagem da capa de Mario Kart WII anunciado na OLX" /></a>
+             <!--Imagem do Jogo 4-->
+            <a href="https://ba.olx.com.br/grande-salvador/games/jogos-de-video-game/guitar-hero-world-tour-wii-apenas-o-jogo-1296423738?" target="_blank"><img src="https://img.olx.com.br/images/11/114488751750559.webp" title="Guitar Hero - World Tour - WII - Apenas o Jogo" height="250" alt="Imagem da capa de Guitar Hero - World Tour WII anunciado na OLX" /></a>
+            <!--Imagem do Jogo 5-->
+            <a href="https://ba.olx.com.br/grande-salvador/games/jogos-de-video-game/commandos-3-destination-berlin-para-pc-legendado-em-pt-br-1296421455?" target="_blank"><img src="https://img.olx.com.br/images/33/336409037408855.webp" height="250" title="Commandos 3: Destination Berlin para PC - Legendado em Pt-Br" alt="Imagem da capa de Commandos 3: Destination Berlin para PC anunciado na OLX" /></a>
+            <!--Imagem do Jogo 6-->
+            <a href="https://ba.olx.com.br/grande-salvador/games/jogos-de-video-game/singularity-pc-original-1296418939?" target="_blank"><img src="https://img.olx.com.br/images/57/577469751809606.webp" height="250" title="Singularity - PC Original" alt="Imagem da capa de Singularity para PC anunciado na OLX" /></a>
+             <!--Imagem do Jogo 7-->
+            <a href="https://ba.olx.com.br/grande-salvador/games/consoles-de-video-game/link-s-crossbow-training-wii-1296418446?" target="_blank"><img src="https://img.olx.com.br/images/54/547465872189338.webp" title="Link&#39;s Crossbow Training - WII" height="250" alt="Imagem da capa de Link&#39;s Crossbow Training - WII anunciado na OLX" /></a>
+            <!--Imagem do Jogo 8-->
+            <a href="https://ba.olx.com.br/grande-salvador/games/jogos-de-video-game/batman-vengeance-pc-produto-original-legendado-pt-br-1296418150?" target="_blank"><img src="https://img.olx.com.br/images/32/320435153354370.webp" height="250" title="Batman Vengeance PC - Produto Original - Legendado Pt-Br" alt="Imagem da capa de Batman Vengeance para PC anunciado na OLX" /></a>
+             <!--Imagem do Jogo 9-->
+            <!--<a href="https://gaming.amazon.com/rose-riddle-fairy-tale-detective/dp/amzn1.pg.item.3d890240-c425-4fcc-88da-1e768825908b?ingress=amzn&ref_=SM_RoseRiddleTheFairyTaleDetectiveCE_S01_FGWP_CRWN&signedIn=true" target="_blank"><img src="https://m.media-amazon.com/images/I/91qritTntSL._SX540_._AGmerlin_._FMwebp_.jpg"height="250" title=" Rose Riddle: The Fairy Tale Detective - CE - Até 22 de Maio" alt="Imagem da capa de Super Mario Strikers WII anunciado na OLX"></a>-->
+            <!--Imagem do Jogo 10-->
+            <!--<a href="https://gaming.amazon.com/pearls-of-atlantis-aga/dp/amzn1.pg.item.3879cb7d-b916-4939-a974-c80dcf390ce9?ingress=amzn&ref_=SM_PearlsofAtlantisTheCove_S01_D01_CRWN" target="_blank"></title><img src="https://m.media-amazon.com/images/I/915QNKDQlTL._SX540_._AGmerlin_._FMwebp_.jpg"height="200" title=" Pearls of Atlantis: The Cove - Até 24 de Abril" alt="Capa do jogo Pearls of Atlantis: The Cove, com uma sereia segurando uma perola no fundo do Mar."></a>-->
+            <!--Imagem do Jogo 11-->
+            <!--<a href="https://gaming.amazon.com/fallout-tactics/dp/amzn1.pg.item.42def665-d412-4e10-a015-c15ee66ac360?ingress=amzn&ref_=SM_FalloutTacticsBrotherhoodofSteel_S01_FGWP_CRWN" target="_blank"><img src="https://m.media-amazon.com/images/I/A1Cb4zd9+9L._SX540_._AGmerlin_._FMwebp_.jpg"height="200" title=" Fallout Tactics: Brotherhood of Steel - Até 24 de Abril" alt="Capa do jogo Fallout Tactics: Brotherhood of Steel, focado em um membro da Brotherhood of Steel envolto em chamas"></a>-->
+        </div>
+        </marquee>
+        <a><b><center><font size="4" face="comics sans">Jogos anunciados na OLX, com a compra podendo ser diretamente pela plataforma, para garantir a segurança do anuncio.</font></center></b></a><br>
+    </Section>
+
+    <footer>
+        <div>
+            <h1 style="color: white;">CETeixeira</h1>
+            <p style="color: white;">Essa pagína faz aprte do Blog DarkCet e Comunidade Cometa Geek no Facebook.</p>
+        </div>
+        <h3 style="margin-top: 150px; color: white; font-size: 15px;"> © Todos os direitos reservados.</h3>
+    </footer>
+       
+</body>
+</html>

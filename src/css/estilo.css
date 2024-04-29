@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    background: rgb(221, 221, 221);
+    justify-content: center;
+    align-items: center;
+ }
+
+.logo{
+    flex: 20%;
+    /*border: 1px solid black;*/
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 5px;
+}
+
+.menu{
+    flex: 60%;
+    /*border: 1px solid black;*/
+    text-align: right;
+    padding: 20px;
+    margin-right: 10%;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    color: #180f4a; 
+}
+
+.menu a{
+    color: #180f4a;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 16px;
+}
+
+.menu a:hover{
+    color: red;
+    border-top: 4px solid #180f4a;
+}
+
+.header{
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    /*background: gray;*/
+    margin-top: 100px;
+}
+
+.headline{
+    margin-left: 10%;
+    flex: 40%;
+    /*border: 1px solid black;*/
+    text-align: center;
+}
+
+.arcalc{
+    margin-right: 10%;
+    flex: 40%;
+    /*border: 1px solid black;*/ 
+    align-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.calc{
+    display: inline-block; 
+    border: 2px solid #ffffff; 
+    background: black; padding: 35px; 
+    border-radius: 25px; 
+    align-content: center; 
+    font-weight: bold; 
+    text-align: center;
+    color: white; 
+    font-weight: bolder; 
+    font-size: 20px; 
+    width: 300px; 
+    margin: 30px;
+   
+}
+
+.headline h2{
+    font-size: 900;
+    color: #180f4a;
+    padding: 0;
+    margin: 0;
+}
+
+.headline h3{
+    font-size: 900;
+    color: #180f4a;
+    padding: 0;
+    margin: 5px;
+}
+
+section{
+    margin-top: 200px;
+}
+
+.bb{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    text-align: center;
+    font-size: bold;
+    color: #180f4a;
+    margin-top: 0;
+    padding: 0;
+    
+}
+
+.dbb{
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 0;
+    padding-top: 0;
+    }
+
+footer{
+    margin-top: 50px;
+    height: 300px;
+    background-image: linear-gradient(180deg, #4024e4, #2d1a96, #180f4a, black);
+    text-align: center;
+    border-top: 5px solid red;
+}
